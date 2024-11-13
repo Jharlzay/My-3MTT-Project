@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--======== FAVICON=============-->
+    <link rel="icon" href="/Preview.png">
+    
+    <!--======== REMIX ICONS =============-->
+    <!--======== FONT AWESOME =============-->
+    <script src="https://kit.fontawesome.com/7ac4033d6f.js" crossorigin="anonymous"></script>
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!--======== SWIPER CSS =============-->
+
+
+    <!-- =======WEB3 CSS=========== -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--======== CSS =============-->
+    <link rel="stylesheet" href="/style.css">
+   
+    <title>VMIS</title>
+</head>
+<body>
+    <main>
+        <section class="navBar">
+            <div class="navIcon">
+                
+                <div class="navLogo">
+                    <img src="/Preview.png" alt="VMIS Logo" width="80px">
+                </div>
+                <h2 class="vmis-text">Vehicle Montoring</h2>
+                <div id="navLinks">
+                    <ul>
+                        <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="/user.html">Road Search</a></li>
+                        <li><a href="./admin.html"><i class="fa-solid fa-lock"></i> Admin</a></li>
+                        <li><a href="#"><i class="fa-solid fa-headset"></i> Distress Call</a></li>
+                        <li><a href="#"><i class="fa-brands fa-rocketchat"></i> Chat</a></li>
+                    </ul>
+                </div>
+            </div>   
+        </section>
+        <section class="imageSlider">
+
+            <img class="mySlides" src="/image/Police_badge-removebg-preview.png">
+            <img class="mySlides" src="/image/road_Safety_badge-removebg-preview.png">
+            <img class="mySlides" src="/image/Police Van 2.jpeg">
+            <img class="mySlides" src="/image/ROAD SAFETY ROAD SEARCH.jpeg">
+            
+        </section>
+        <section>
+            <div class="searchBar">
+
+                <!-- The search bar can be used to search for recently flagged plate number
+                     under investigation and numbers that escaped traffic. Also it can help an
+                     officer easily get contacts for distress calls e.g commisioners contact/other agency contacts e.g road safety -->
+                    <input id="searchBar" type="text" placeholder="enter your search" name="searchBar"/>
+                    <button type="submit" id="search-Btn"><i class="fa-solid fa-magnifying-glass"></i> Search </button> 
+            </div>
+        </section>
+        <section class="userManager">
+            <div class="dashboard-container">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="logo">
+                        <h1>VMIS Admin</h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="./admin.html">Dashboard</a></li>
+                            <li><a href="./userManager.html" class="active">User Management</a></li>
+                            <li><a href="./vehicleDataBAse.html">Vehicle Database</a></li>
+                            <li><a href="./reports.html">Reports</a></li>
+                            <li><a href="./settings.html">Settings</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+        
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Header -->
+                    <header class="header">
+                        <h2>User Management</h2>
+                        <div class="profile">
+                            <img src="profile-placeholder.png" alt="Admin Profile">
+                            <span>Admin</span>
+                        </div>
+                    </header>
+        
+                    <!-- User Management Table -->
+                    <section class="user-management">
+                        <div class="header-row">
+                            <h3>Registered Officers</h3>
+                            <br>
+                            <button class="add-user-btn"><a href="#officers-reg"> Add New Officer </a></button                     </div>
+                            <br><br>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <td>John Doe</td>
+                                    <td>john.doe@example.com</td>
+                                    <td>Officer</td>
+                                    <td><span class="status active">Active</span></td>
+                                    <td>
+                                        <button class="edit-btn">Edit</button>
+                                        <button class="delete-btn">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Jane Smith</td>
+                                    <td>jane.smith@example.com</td>
+                                    <td>Supervisor</td>
+                                    <td><span class="status inactive">Inactive</span></td>
+                                    <td>
+                                        <button class="edit-btn">Edit</button>
+                                        <button class="delete-btn">Delete</button>
+                                    </td>
+                                </tr>
+                                <!-- Additional rows -->
+                            </tbody>
+                        </table>
+            </div>
+        </section>
+       
+            <!-- Officers Section -->
+            <section class="officers-section" id="officers-reg">
+                <!-- Add Officer Form -->
+                <div class="add-officer-form">
+                    <h3>Add New Officer</h3>
+                    <form id="officer-form">
+                        <label for="officer-name">Full Name</label>
+                        <input type="text" id="officer-name" placeholder="Enter officer's name" required>
+
+                        <label for="officer-id">Officer ID</label>
+                        <input type="text" id="officer-id" placeholder="Enter officer's ID" required>
+
+                        <label for="rank">Rank</label>
+                            <select id="rank" name="rank" required>
+                                <option value="">Select rank</option>
+                                <option value="Inspector">Inspector</option>
+                                <option value="Sergeant">Sergeant</option>
+                                <option value="Constable">Constable</option>
+                                <option value="Commander">Commander</option>
+                            </select><br><br>
+
+                        <label for="officer-email">Email</label>
+                        <input type="email" id="officer-email" placeholder="Enter officer's email" required>
+
+                        <label for="officer-phone">Phone Number</label>
+                        <input type="tel" id="officer-phone" placeholder="Enter officer's phone number" required>
+
+                        <button type="submit" class="add-btn">Add Officer</button>
+                    </form>
+                </div>
+
+                <!-- Officers List -->
+                <div class="officers-list">
+                    <h3>Registered Officers</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Officer ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="officers-table-body">
+                            <!-- Officer rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- ======Monitoring Login Activity====== -->
+
+<section class="officer-activity-monitoring">
+         <!-- Main Content -->
+         <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h2>Monitor Login Activity</h2>
+                <div class="profile">
+                    <img src="profile-placeholder.png" alt="Admin Profile">
+                    <span>Admin</span>
+                </div>
+            </header>
+
+            <!-- Login Activity Section -->
+            <section class="login-activity-section">
+                <h3>Login Activity</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Officer ID</th>
+                            <th>Name</th>
+                            <th>Login Timestamp</th>
+                            <th>IP Address</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="login-activity-body">
+                        <!-- Login activity rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</section>
+
+     
+        <!-- How It Works Section -->
+<section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      
+      <!-- Step 1 -->
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Register as an Officer</h3>
+        <p>Start by creating your VMIS officer account. Fill in your official details and badge ID to get authorized access.</p>
+      </div>
+  
+      <!-- Step 2 -->
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Log in Securely</h3>
+        <p>Use your credentials to securely log in and access the system dashboard. All data is encrypted to ensure security.</p>
+      </div>
+  
+      <!-- Step 3 -->
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Monitor Vehicle Records</h3>
+        <p>Input a vehicle’s plate number to retrieve registration details, owner information, and verified documents.</p>
+      </div>
+  
+      <!-- Step 4 -->
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Ensure Public Safety</h3>
+        <p>Utilize the system to keep highways and communities secure, ensuring only authorized personnel operate registered vehicles.</p>
+      </div>
+  
+    </div>
+  </section>
+  <!--======== FOOTER ===================-->
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>VMIS</h2>
+        <p>Vehicle Monitoring and Identification System</p>
+      </div>
+  
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: support@vmis.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Follow us:</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 VMIS. All rights reserved.</p>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </div>
+  </footer>
+</main>
+
+
+
+
+<script>
+var slideIndex = 0;
+carousel();
+const officerForm = document.getElementById('officer-form');
+const officersTableBody = document.getElementById('officers-table-body');
+let officers = [];
+
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+
+// Add Officer
+officerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('officer-name').value;
+    const id = document.getElementById('officer-id').value;
+    const email = document.getElementById('officer-email').value;
+    const phone = document.getElementById('officer-phone').value;
+    const rank = document.getElementById("rank").value;
+
+    const officer = { id, name, email, phone };
+    officers.push(officer);
+
+    renderOfficers();
+    officerForm.reset();
+});
+
+// Render Officers
+function renderOfficers() {
+    officersTableBody.innerHTML = '';
+
+    officers.forEach((officer, index) => {
+        const row = `
+            <tr>
+                <td>${officer.id}</td>
+                <td>${officer.name}</td>
+                <td>${officer.email}</td>
+                <td>${officer.phone}</td>
+                <td>
+                    <button class="edit-btn" onclick="editOfficer(${index})">Edit</button>
+                    <button class="delete-btn" onclick="deleteOfficer(${index})">Delete</button>
+                </td>
+            </tr>
+        `;
+        officersTableBody.innerHTML += row;
+    });
+}
+
+// Edit Officer
+function editOfficer(index) {
+    const officer = officers[index];
+
+    document.getElementById('officer-name').value = officer.name;
+    document.getElementById('officer-id').value = officer.id;
+    document.getElementById('officer-email').value = officer.email;
+    document.getElementById('officer-phone').value = officer.phone;
+
+    officers.splice(index, 1);
+    renderOfficers();
+}
+
+// Delete Officer
+function deleteOfficer(index);
+
+//Monitoring Log
+
+const loginActivity = [
+    {
+        officerId: 'OFF001',
+        name: 'John Doe',
+        timestamp: '2024-11-12 10:00:00',
+        ipAddress: '192.168.1.10',
+        status: 'Successful',
+    },
+    {
+        officerId: 'OFF002',
+        name: 'Jane Smith',
+        timestamp: '2024-11-12 10:30:00',
+        ipAddress: '192.168.1.12',
+        status: 'Failed',
+    },
+    {
+        officerId: 'OFF003',
+        name: 'Michael Brown',
+        timestamp: '2024-11-12 11:00:00',
+        ipAddress: '192.168.1.15',
+        status: 'Successful',
+    },
+];
+
+// Function to render login activity
+function renderLoginActivity() {
+    const loginActivityBody = document.getElementById('login-activity-body');
+    loginActivityBody.innerHTML = '';
+
+    loginActivity.forEach((activity) => {
+        const row = `
+            <tr>
+                <td>${activity.officerId}</td>
+                <td>${activity.name}</td>
+                <td>${activity.timestamp}</td>
+                <td>${activity.ipAddress}</td>
+                <td>${activity.status}</td>
+            </tr>
+        `;
+        loginActivityBody.innerHTML += row;
+    });
+}
+
+// Call render function on page load
+renderLoginActivity();
+</script>
+</body>
+

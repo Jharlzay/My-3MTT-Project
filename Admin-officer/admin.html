@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--======== FAVICON=============-->
+    <link rel="icon" href="/Preview.png">
+    
+    <!--======== REMIX ICONS =============-->
+    <!--======== FONT AWESOME =============-->
+    <script src="https://kit.fontawesome.com/7ac4033d6f.js" crossorigin="anonymous"></script>
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!--======== SWIPER CSS =============-->
+
+
+    <!-- =======WEB3 CSS=========== -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--======== CSS =============-->
+    <link rel="stylesheet" href="/style.css">
+   
+    <title>VMIS</title>
+</head>
+<body>
+    <main>
+        <section class="navBar">
+            <div class="navIcon">
+                
+                <div class="navLogo">
+                    <a href="/index.html"><img src="/image/Preview.png" alt="VMIS Logo" width="80px"></a>
+                </div>
+                <h2 class="vmis-text">Vehicle Montoring</h2>
+                <div id="navLinks">
+                    <ul>
+                        <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="/user.html">Road Search</a></li>
+                        <li><a href="./admin.html"><i class="fa-solid fa-lock"></i> Admin</a></li>
+                        <li><a href="#"><i class="fa-solid fa-headset"></i> Distress Call</a></li>
+                        <li><a href="#"><i class="fa-brands fa-rocketchat"></i> Chat</a></li>
+                    </ul>
+                </div>
+            </div>   
+        </section>
+        <section class="imageSlider">
+
+            <img class="mySlides" src="/image/Police_badge-removebg-preview.png">
+            <img class="mySlides" src="/image/road_Safety_badge-removebg-preview.png">
+            <img class="mySlides" src="/image/Police Van 2.jpeg">
+            <img class="mySlides" src="/image/ROAD SAFETY ROAD SEARCH.jpeg">
+            
+        </section>
+        <section>
+            <div class="searchBar">
+
+                <!-- The search bar can be used to search for recently flagged plate number
+                     under investigation and numbers that escaped traffic. Also it can help an
+                     officer easily get contacts for distress calls e.g commisioners contact/other agency contacts e.g road safety -->
+                    <input id="searchBar" type="text" placeholder="enter your search" name="searchBar"/>
+                    <button type="submit" id="search-Btn"><i class="fa-solid fa-magnifying-glass"></i> Search </button> 
+            </div>
+        </section>
+        <section class="admin">
+            <div class="dashboard-container" id="dashboard-container">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="logo">
+                        <h1>VMIS Admin</h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="/admin/admin.html" class="active">Dashboard</a></li>
+                            <li><a href="/admin/userManager.html">User Management</a></li>
+                            <li><a href="./vehicleDataBAse.html">Vehicle Database</a></li>
+                            <li><a href="./reports.html">Reports</a></li>
+                            <li><a href="#settings">Settings</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+        
+                <!-- Main Content -->
+                <main class="main-content">
+                    <!-- Header -->
+                    <header class="header">
+                        <h2>Admin Dashboard</h2>
+                        <div class="profile">
+                            <img src="profile-placeholder.png" alt="Admin Profile">
+                            <span>Admin</span>
+                        </div>
+                    </header>
+        
+                    <!-- Dashboard Cards -->
+                    <section class="dashboard-metrics">
+                        <div class="card">
+                            <h3>Total Registered Vehicles</h3>
+                            <p>1,234</p>
+                        </div>
+                        <div class="card">
+                            <h3>Registered Officers</h3>
+                            <p>345</p>
+                        </div>
+                        <div class="card">
+                            <h3>Plate Number Queries</h3>
+                            <p>567</p>
+                        </div>
+                        <div class="card">
+                            <h3>Flagged Vehicles</h3>
+                            <p>12</p>
+                        </div>
+                    </section>
+        
+                    <!-- Table Section -->
+                    <section class="data-table">
+                        <h3>Recent Vehicle Queries</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Plate Number</th>
+                                    <th>Owner Name</th>
+                                    <th>Status</th>
+                                    <th>Date Queried</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>AB123CD</td>
+                                    <td>John Doe</td>
+                                    <td>Cleared</td>
+                                    <td>2024-11-11</td>
+                                </tr>
+                                <tr>
+                                    <td>EF456GH</td>
+                                    <td>Jane Smith</td>
+                                    <td>Flagged</td>
+                                    <td>2024-11-10</td>
+                                </tr>
+                                <!-- More rows -->
+                            </tbody>
+                        </table>
+                    </section>
+                </main>
+            </div>
+
+        </section>
+       
+        <section class="features">
+            <h2>Key Features of VMIS</h2>
+            <div class="feature-list">
+        
+            <!-- Feature 1 -->
+            <div class="feature" id="vmis-features">
+                <img src="secure-access.png" alt="Secure Access Icon" class="feature-icon">
+                <h3>Secure Access</h3>
+                <p>Only authorized officers can register, ensuring data security and privacy within the VMIS platform.</p>
+            </div>
+        
+            <!-- Feature 2 -->
+            <div class="feat">
+                <img src="real-time-monitoring.png" alt="Real-Time Monitoring Icon" class="feature-icon">
+                <h3>Real-Time Monitoring</h3>
+                <p>Access up-to-date information on vehicle and owner details, enhancing highway and community safety.</p>
+            </div>
+        
+            <!-- Feature 3 -->
+            <div class="feature">
+                <img src="vehicle-database.png" alt="Vehicle Database Icon" class="feature-icon">
+                <h3>Comprehensive Vehicle Database</h3>
+                <p>Efficiently search and retrieve information from a vast database of registered vehicles and drivers.</p>
+            </div>
+        
+            <!-- Feature 4 -->
+            <div class="feat">
+                <img src="/report-generation 2.png" alt="Report Generation Icon" class="feature-icon">
+                <h3>Report Generation</h3>
+                <p>Generate detailed reports on vehicle activity and officer interactions to support investigations.</p>
+            </div>
+        
+            </div>
+        </section>
+        <!-- How It Works Section -->
+<section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      
+      <!-- Step 1 -->
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Register as an Officer</h3>
+        <p>Start by creating your VMIS officer account. Fill in your official details and badge ID to get authorized access.</p>
+      </div>
+  
+      <!-- Step 2 -->
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Log in Securely</h3>
+        <p>Use your credentials to securely log in and access the system dashboard. All data is encrypted to ensure security.</p>
+      </div>
+  
+      <!-- Step 3 -->
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Monitor Vehicle Records</h3>
+        <p>Input a vehicle’s plate number to retrieve registration details, owner information, and verified documents.</p>
+      </div>
+  
+      <!-- Step 4 -->
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Ensure Public Safety</h3>
+        <p>Utilize the system to keep highways and communities secure, ensuring only authorized personnel operate registered vehicles.</p>
+      </div>
+  
+    </div>
+  </section>
+  <!--======== FOOTER ===================-->
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>VMIS</h2>
+        <p>Vehicle Monitoring and Identification System</p>
+      </div>
+  
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: support@vmis.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Follow us:</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 VMIS. All rights reserved.</p>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </div>
+  </footer>
+</main>
+
+
+
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</body>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--======== FAVICON=============-->
+    <link rel="icon" href="/Preview.png">
+    
+    <!--======== REMIX ICONS =============-->
+    <!--======== FONT AWESOME =============-->
+    <script src="https://kit.fontawesome.com/7ac4033d6f.js" crossorigin="anonymous"></script>
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!--======== SWIPER CSS =============-->
+
+
+    <!-- =======WEB3 CSS=========== -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--======== CSS =============-->
+    <link rel="stylesheet" href="/style.css">
+   
+    <title>VMIS</title>
+</head>
+<body>
+    <main>
+        <section class="navBar">
+            <div class="navIcon">
+                
+                <div class="navLogo">
+                    <img src="/Preview.png" alt="VMIS Logo" width="80px">
+                </div>
+                <h2 class="vmis-text">Vehicle Montoring</h2>
+                <div id="navLinks">
+                    <ul>
+                        <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="#vmis-how">How It Works</a></li>
+                        <li><a href="admin.html"><i class="fa-solid fa-lock"></i> Admin</a></li>
+                        <li><a href="#"><i class="fa-solid fa-headset"></i> Distress Call</a></li>
+                        <li><a href="#"><i class="fa-brands fa-rocketchat"></i> Chat</a></li>
+                    </ul>
+                </div>
+            </div>   
+        </section>
+        <section class="imageSlider">
+
+            <img class="mySlides" src="./image/Police_badge-removebg-preview.png">
+            <img class="mySlides" src="./image/road_Safety_badge-removebg-preview.png">
+            <img class="mySlides" src="./image/Police Van 2.jpeg">
+            <img class="mySlides" src="./image/ROAD SAFETY ROAD SEARCH.jpeg">
+            
+        </section>
+        <section>
+            <div class="searchBar">
+
+                <!-- The search bar can be used to search for recently flagged plate number
+                     under investigation and numbers that escaped traffic. Also it can help an
+                     officer easily get contacts for distress calls e.g commisioners contact/other agency contacts e.g road safety -->
+                    <input id="searchBar" type="text" placeholder="enter your search" name="searchBar"/>
+                    <button type="submit" id="search-Btn"><i class="fa-solid fa-magnifying-glass"></i> Search </button> 
+            </div>
+        </section>
+        <section class="admin">
+            <div class="dashboard-container" id="dashboard-container">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="logo">
+                        <h1>VMIS Admin</h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="/admin/admin.html" class="active">Dashboard</a></li>
+                            <li><a href="/admin/userManager.html">User Management</a></li>
+                            <li><a href="./vehicleDataBAse.html">Vehicle Database</a></li>
+                            <li><a href="./reports.html">Reports</a></li>
+                            <li><a href="#settings">Settings</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+
+        <!-- Main Content -->
+            <main class="main-content">
+                <!-- Header -->
+                <header class="header">
+                    <h2>Settings</h2>
+                    <div class="profile">
+                        <img src="profile-placeholder.png" alt="Admin Profile">
+                        <span>Admin</span>
+                    </div>
+                </header>
+
+                <!-- Settings Section -->
+                <section class="settings-section">
+                    <form id="settings-form">
+                        <!-- General Settings -->
+                        <div class="settings-group">
+                            <h4>General Settings</h4>
+                            <label for="system-name">System Name</label>
+                            <input type="text" id="system-name" value="VMIS" placeholder="Enter system name">
+
+                            <label for="admin-email">Admin Email</label>
+                            <input type="email" id="admin-email" value="admin@vmis.com" placeholder="Enter admin email">
+
+                            <label for="theme-color">Theme Color</label>
+                            <input type="color" id="theme-color" value="#2c3e50">
+                        </div>
+
+                        <!-- Security Settings -->
+                        <div class="settings-group">
+                            <h4>Security Settings</h4>
+                            <label for="password-length">Minimum Password Length</label>
+                            <input type="number" id="password-length" value="8" min="4" max="16">
+
+                            <label>
+                                <input type="checkbox" id="two-factor-auth" checked>
+                                Enable Two-Factor Authentication
+                            </label>
+
+                            <label>
+                                <input type="checkbox" id="session-timeout" checked>
+                                Enable Session Timeout
+                            </label>
+                        </div>
+
+                        <!-- Notifications -->
+                        <div class="settings-group">
+                            <h4>Notifications</h4>
+                            <label>
+                                <input type="checkbox" id="email-notifications" checked>
+                                Enable Email Notifications
+                            </label>
+
+                            <label>
+                                <input type="checkbox" id="sms-notifications">
+                                Enable SMS Notifications
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="settings-actions">
+                            <button type="submit" class="save-btn">Save Changes</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+
+        
+        <!-- How It Works Section -->
+<section class="how-it-works" id="vmis-how">
+    <h2>How It Works</h2>
+    <div class="steps">
+      
+      <!-- Step 1 -->
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Register as an Officer</h3>
+        <p>Start by creating your VMIS officer account. Fill in your official details and badge ID to get authorized access.</p>
+      </div>
+  
+      <!-- Step 2 -->
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Log in Securely</h3>
+        <p>Use your credentials to securely log in and access the system dashboard. All data is encrypted to ensure security.</p>
+      </div>
+  
+      <!-- Step 3 -->
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Monitor Vehicle Records</h3>
+        <p>Input a vehicle’s plate number to retrieve registration details, owner information, and verified documents.</p>
+      </div>
+  
+      <!-- Step 4 -->
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Ensure Public Safety</h3>
+        <p>Utilize the system to keep highways and communities secure, ensuring only authorized personnel operate registered vehicles.</p>
+      </div>
+  
+    </div>
+  </section>
+  <!--======== FOOTER ===================-->
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>VMIS</h2>
+        <p>Vehicle Monitoring and Identification System</p>
+      </div>
+  
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: support@vmis.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Follow us:</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 VMIS. All rights reserved.</p>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </div>
+  </footer>
+</main>
+
+
+
+
+<script>
+const settingsForm = document.getElementById('settings-form');
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+
+// Settings Form
+
+settingsForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const settings = {
+        systemName: document.getElementById('system-name').value,
+        adminEmail: document.getElementById('admin-email').value,
+        themeColor: document.getElementById('theme-color').value,
+        passwordLength: document.getElementById('password-length').value,
+        twoFactorAuth: document.getElementById('two-factor-auth').checked,
+        sessionTimeout: document.getElementById('session-timeout').checked,
+        emailNotifications: document.getElementById('email-notifications').checked,
+        smsNotifications: document.getElementById('sms-notifications').checked,
+    };
+
+    console.log('Settings Saved:', settings);
+    alert('Settings have been saved successfully!');
+});
+</script>
+</body>
