@@ -10,7 +10,7 @@
     <!--======== REMIX ICONS =============-->
     <!--======== FONT AWESOME =============-->
     <script src="https://kit.fontawesome.com/7ac4033d6f.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=policy" />
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <!--======== SWIPER CSS =============-->
@@ -19,36 +19,38 @@
     <!-- =======WEB3 CSS=========== -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!--======== CSS =============-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/image/Preview-removebg-preview.png">
    
-    <title>VMIS</title>
+    <title>VMIS Login</title>
 </head>
 <body>
     <main>
-        <section class="navBar">
+        <section class="navBar" style="background-color: #10222E">
             <div class="navIcon">
                 
                 <div class="navLogo">
-                    <img src="/Preview.png" alt="VMIS Logo" width="80px">
+                    <a href="/user-officer/index.html"><img src="/image/Preview.png" alt="VMIS Logo" width="80px"></a>
                 </div>
                 <h2 class="vmis-text">Vehicle Montoring</h2>
                 <div id="navLinks">
                     <ul>
-                        <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-                        <li><a href="#vmis-features">Features</a></li>
-                        <li><a href="/admin/admin.html"><i class="fa-solid fa-lock"></i> Admin</a></li>
+                        <li><a href="/user-officer/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="/user-officer/login.html"><span class="material-symbols-outlined">
+                          policy
+                          </span>Vehicle search</a></li>
                         <li><a href="#"><i class="fa-solid fa-headset"></i> Distress Call</a></li>
-                        <li><a href="#"><i class="fa-brands fa-rocketchat"></i> Chat</a></li>
+                        <li><a href="/user-officer/chat.html"><i class="fa-brands fa-rocketchat"></i> Chat</a></li>
                     </ul>
                 </div>
             </div>   
         </section>
         <section class="imageSlider">
 
-            <img class="mySlides" src="./image/Police_badge-removebg-preview.png">
-            <img class="mySlides" src="./image/road_Safety_badge-removebg-preview.png">
-            <img class="mySlides" src="./image/Police Van 2.jpeg">
-            <img class="mySlides" src="./image/ROAD SAFETY ROAD SEARCH.jpeg">
+            <img class="mySlides" src="/image/Police_badge-removebg-preview.png">
+            <img class="mySlides" src="/image/road_Safety_badge-removebg-preview.png">
+            <img class="mySlides" src="/image/Police Van 2.jpeg">
+            <img class="mySlides" src="/image/ROAD SAFETY ROAD SEARCH.jpeg">
             
         </section>
         <section>
@@ -61,21 +63,6 @@
                     <button type="submit" id="search-Btn"><i class="fa-solid fa-magnifying-glass"></i> Search </button> 
             </div>
         </section>
-
-        <section class="hero-section">
-            <div class="hero-content">
-              <h1>Welcome to VMIS Officer Search Page</h1>
-              <p>
-                The Vehicle Monitoring and Identification System (VMIS) provides officers 
-                with an efficient platform to search for and manage vehicle-related data 
-                effortlessly. Monitor activity, retrieve vehicle details, and ensure 
-                community safety with ease.
-              </p>
-              <div class="hero-buttons">
-                <button id="login-btn"><a href="#maincontainer"> Login</a></button>
-                <button id="how-it-works-btn"><a href="#how-it-works"> How it Works</a></button>
-              </div>
-            </div>
             <div class="hero-image">
               <img src="/image/Police Van 2.jpeg" alt="Officer Hero" width="600px"/>
             </div>
@@ -86,7 +73,7 @@
             <div id="maincontainer">
                 <div id="container">
                     <div id="img">
-                        <img src="./Image/Police_Van-removebg-preview.png" alt="admin's pics">
+                        <img src="/Image/Police_Van-removebg-preview.png" alt="admin's pics">
                     </div>
                     <div id="header">
                         <h2>LOGIN NOW</h2>
@@ -100,10 +87,10 @@
                         <input type="text" id="secondempty" disabled>
                     </div>
                     <div id="btn">
-                        <button><a href="/userDashboard.html" target="_blank" style=" text-decoration: none; color: white">login</a></button>
+                        <button><a href="/user-officer/userDashboard.html" style=" text-decoration: none; color: white">login</a></button>
                     </div>
                 </div>
-                <p>Not an admin?<a href="./newAdmin.html">register now</a></p>
+                <p style="color: rgba(0, 0, 0, 0.9); font-weight:bolder"><a href="#">forgotten password?</a></p>
             </div>
         </section>
 
@@ -114,28 +101,28 @@
         
             <!-- Feature 1 -->
             <div class="feature" id="vmis-features">
-                <img src="secure-access.png" alt="Secure Access Icon" class="feature-icon">
+                <img src="/image/secure-access.png" alt="Secure Access Icon" class="feature-icon">
                 <h3>Secure Access</h3>
                 <p>Only authorized officers can register, ensuring data security and privacy within the VMIS platform.</p>
             </div>
         
             <!-- Feature 2 -->
             <div class="feat">
-                <img src="real-time-monitoring.png" alt="Real-Time Monitoring Icon" class="feature-icon">
+                <img src="/image/real-time-monitoring.png" alt="Real-Time Monitoring Icon" class="feature-icon">
                 <h3>Real-Time Monitoring</h3>
                 <p>Access up-to-date information on vehicle and owner details, enhancing highway and community safety.</p>
             </div>
         
             <!-- Feature 3 -->
             <div class="feature">
-                <img src="vehicle-database.png" alt="Vehicle Database Icon" class="feature-icon">
+                <img src="/image/vehicle-database.png" alt="Vehicle Database Icon" class="feature-icon">
                 <h3>Comprehensive Vehicle Database</h3>
                 <p>Efficiently search and retrieve information from a vast database of registered vehicles and drivers.</p>
             </div>
         
             <!-- Feature 4 -->
             <div class="feat">
-                <img src="/report-generation 2.png" alt="Report Generation Icon" class="feature-icon">
+                <img src="/image/report-generation 2.png" alt="Report Generation Icon" class="feature-icon">
                 <h3>Report Generation</h3>
                 <p>Generate detailed reports on vehicle activity and officer interactions to support investigations.</p>
             </div>
@@ -188,8 +175,8 @@
       <div class="footer-links">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Features</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">ROad Search</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">How It Works</a></li>
           <li><a href="#">Contact</a></li>
@@ -229,7 +216,7 @@ function carousel() {
   slideIndex++;
   if (slideIndex > x.length) {slideIndex = 1}
   x[slideIndex-1].style.display = "block";
-  setTimeout(carousel, 2000); // Change image every 2 seconds
+  setTimeout(carousel, 3000); // Change image every 2 seconds
 }
 </script>
 </body>

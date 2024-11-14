@@ -10,7 +10,7 @@
     <!--======== REMIX ICONS =============-->
     <!--======== FONT AWESOME =============-->
     <script src="https://kit.fontawesome.com/7ac4033d6f.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=policy" />
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <!--======== SWIPER CSS =============-->
@@ -19,7 +19,8 @@
     <!-- =======WEB3 CSS=========== -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!--======== CSS =============-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/image/Preview-removebg-preview.png">
    
     <title>VMIS</title>
 </head>
@@ -29,26 +30,27 @@
             <div class="navIcon">
                 
                 <div class="navLogo">
-                    <a href="/index.html"><img src="/image/Preview.png" alt="VMIS Logo" width="80px">
+                    <a href="/user-officer/index.html"><img src="/image/Preview.png" alt="VMIS Logo" width="80px"></a>
                 </div>
                 <h2 class="vmis-text">Vehicle Montoring</h2>
                 <div id="navLinks">
                     <ul>
-                        <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-                        <li><a href="#vmis-features">Features</a></li>
-                        <li><a href="/admin/admin.html"><i class="fa-solid fa-lock"></i> Admin</a></li>
+                        <li><a href="/user-officer/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="/user-officer/login.html"><span class="material-symbols-outlined">
+                          policy
+                          </span>Vehicle search</a></li>
                         <li><a href="#"><i class="fa-solid fa-headset"></i> Distress Call</a></li>
-                        <li><a href="#"><i class="fa-brands fa-rocketchat"></i> Chat</a></li>
+                        <li><a href="/user-officer/chat.html"><i class="fa-brands fa-rocketchat"></i> Chat</a></li>
                     </ul>
                 </div>
             </div>   
         </section>
         <section class="imageSlider">
 
-            <img class="mySlides" src="./image/Police_badge-removebg-preview.png">
-            <img class="mySlides" src="./image/road_Safety_badge-removebg-preview.png">
-            <img class="mySlides" src="./image/Police Van 2.jpeg">
-            <img class="mySlides" src="./image/ROAD SAFETY ROAD SEARCH.jpeg">
+            <img class="mySlides" src="/image/Police_badge-removebg-preview.png">
+            <img class="mySlides" src="/image/road_Safety_badge-removebg-preview.png">
+            <img class="mySlides" src="/image/Police Van 2.jpeg">
+            <img class="mySlides" src="/image/ROAD SAFETY ROAD SEARCH.jpeg">
             
         </section>
         <section>
@@ -61,7 +63,26 @@
                     <button type="submit" id="search-Btn"><i class="fa-solid fa-magnifying-glass"></i> Search </button> 
             </div>
         </section>
-       
+
+        <section class="hero-section">
+            <div class="hero-content">
+              <h1>Welcome to VMIS Officer Search Page</h1>
+              <p>
+                The Vehicle Monitoring and Identification System (VMIS) provides officers 
+                with an efficient platform to search for and manage vehicle-related data 
+                effortlessly. Monitor activity, retrieve vehicle details, and ensure 
+                community safety with ease.
+              </p>
+              <div class="hero-buttons">
+                <button id="login-btn"><a href="/user-officer/login.html"> Login</a></button>
+                <button id="how-it-works-btn"><a href="#how-it-works"> How it Works</a></button>
+              </div>
+            </div>
+            <div class="hero-image">
+              <img src="/image/Police Van 2.jpeg" alt="Officer Hero" width="600px"/>
+            </div>
+       </section>
+
         <section class="features">
             <h2>Key Features of VMIS</h2>
             <div class="feature-list">
@@ -89,7 +110,7 @@
         
             <!-- Feature 4 -->
             <div class="feat">
-                <img src="/image/report-generation.png" alt="Report Generation Icon" class="feature-icon">
+                <img src="/image/report-generation 2.png" alt="Report Generation Icon" class="feature-icon">
                 <h3>Report Generation</h3>
                 <p>Generate detailed reports on vehicle activity and officer interactions to support investigations.</p>
             </div>
@@ -97,7 +118,7 @@
             </div>
         </section>
         <!-- How It Works Section -->
-<section class="how-it-works">
+<section class="how-it-works" id="how-it-works">
     <h2>How It Works</h2>
     <div class="steps">
       

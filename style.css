@@ -100,6 +100,19 @@ main{
 
 }
 
+
+@media (max-width: 768px) {
+   .navLinks, .navBar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navIcon{
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+}
 .navIcon {
     display: flex;
     justify-content: space-around;
@@ -1171,6 +1184,9 @@ table tr:hover {
   cursor: pointer;
 }
 
+
+
+
 #login-btn {
   background-color: #4CAF50;
   color: white;
@@ -1502,3 +1518,76 @@ h2 {
   background-color:rgb(10, 245, 10);
   cursor: pointer;
   }
+
+  /* ===========Let the Vehicle details display here=============*/
+
+  #vehicle-detail-display{
+    
+    height:max-content;
+    background-color:var(--navy);
+    padding: 30px;
+
+  }
+
+  #vehicle-detail-display h2 {
+    color:#27ae60;
+    font-weight:bolder;
+  }
+
+.driver-image{
+  
+  justify-content:left;
+  width: 350px;
+  height: 300px;
+  background-color: white;
+  padding: 30px 20px;
+  margin: 20px 20px;
+}
+
+#drivers-details {
+  width:500px;
+  height: 50px;
+  background-color: white;
+  padding: 30px 20px;
+  margin: 10px 20px;
+}
+
+#vehicle-image{ 
+  width: 350px;
+  height: 300px;
+  background-color: white;
+  padding: 30px 20px;
+  margin: 20px 20px;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+#drivers-image{
+  width: 350px;
+  height: 300px;
+  background-color: white;
+  padding: 30px 20px;
+  margin: 20px 20px;
+}
+
+
+#vehicle-details{  width:500px;
+  height: 50px;
+  background-color: white;
+  padding: 30px 20px;
+  margin: 10px 20px;
+}
+
+#image-details{
+  display:flex;
+  justify-content: space-around;
+
+}
+
+#other-details {
+  display:flex;
+  justify-content: space-around;
+
+}
+
+                     
+
