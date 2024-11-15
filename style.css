@@ -1523,7 +1523,8 @@ h2 {
 
   #vehicle-detail-display{
     
-    height:max-content;
+    height: max-content;
+    overflow: wrap;
     background-color:var(--navy);
     padding: 30px;
 
@@ -1552,29 +1553,69 @@ h2 {
   margin: 10px 20px;
 }
 
-#vehicle-image{ 
+/* #vehicle-image{ 
   width: 350px;
   height: 300px;
   background-color: white;
   padding: 30px 20px;
   margin: 20px 20px;
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
-}
+} */
 
-#drivers-image{
+#drivers-image-display {
   width: 350px;
   height: 300px;
   background-color: white;
   padding: 30px 20px;
   margin: 20px 20px;
+  cursor: pointer;
 }
 
+#vehicle-image-display{
+  width: 600px;
+  height: 300px;
+  background-color: white;
+  padding: 30px 20px;
+  margin: 20px 20px;
+  cursor: pointer;
 
-#vehicle-details{  width:500px;
-  height: 50px;
+}
+
+#vehicle-image-display:hover{
+  width: 600px;
+  height: 300px;
+  background-color: rgba(250, 250, 250);
+  padding: 30px 20px;
+  margin: 20px 20px;
+  cursor: pointer;
+  border: 6px solid rgb(255, 187, 0);
+  transition: 3s;
+  box-shadow: 10px 10px 10px rgba(243, 241, 241, 0.5);
+
+}
+
+#vehicle-details, 
+#plate-number, #fname, #lname, #contact-num,
+#licence-num { 
+  width:200px;
+  height: 10px;
   background-color: white;
   padding: 30px 20px;
   margin: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+
+#home-address, #email-address {
+  width:400px;
+  height: 10px;
+  background-color: white;
+  padding: 30px 20px;
+  margin: 10px 20px;
+  color:rgb(8, 1, 1);
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 #image-details{
@@ -1584,9 +1625,9 @@ h2 {
 }
 
 #other-details {
-  display:flex;
-  justify-content: space-around;
-
+  display: grid;
+  grid-template-columns:auto auto auto;
+ 
 }
 
                      
