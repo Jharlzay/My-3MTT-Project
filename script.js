@@ -56,32 +56,32 @@ document.getElementById("driver-data-form").addEventListener("submit", function 
     }
 });
 
-//Form Preview
-// function submitForm(e) {
-//     e.preventDefault(); // Prevent the default form submission
+//===========VEHICLE Form Preview============
+function submitForm(e) {
+    e.preventDefault(); // Prevent the default form submission
 
-//     // Collect form data
-//     const formData = {
-//         driverName: document.getElementById("driver-name").value,
-//         nin: document.getElementById("nin").value,
-//         licenseNumber: document.getElementById("license-number").value,
-//         phoneNumber: document.getElementById("phone-number").value,
-//         carPlate: document.getElementById("plate-number").value,
-//         carModel: document.getElementById("car-model").value,
-//         carColor: document.getElementById("car-color").value,
-//         carYear: document.getElementById("car-year").value
-//     };
+    // Collect form data
+    const formData = {
+        driverName: document.getElementById("driver-name").value,
+        nin: document.getElementById("nin").value,
+        licenseNumber: document.getElementById("license-number").value,
+        phoneNumber: document.getElementById("phone-number").value,
+        carPlate: document.getElementById("plate-number").value,
+        carModel: document.getElementById("car-model").value,
+        carColor: document.getElementById("car-color").value,
+        carYear: document.getElementById("car-year").value
+    };
 
 //     // Generate preview HTML
-// //     const previewContent = `
-// //         <p><strong>Driver Name:</strong> ${formData.driverName}</p>
-// //         <p><strong>NIN:</strong> ${formData.nin}</p>
-// //         <p><strong>License Number:</strong> ${formData.licenseNumber}</p>
-// //         <p><strong>Phone Number:</strong> ${formData.phoneNumber}</p>
-// //         <p><strong>Car Plate Number:</strong> ${formData.carPlate}</p>
-// //         <p><strong>Car Model:</strong> ${formData.carModel}</p>
-// //         <p><strong>Car Color:</strong> ${formData.carColor}</p>
-// //         <p><strong>Year of Manufacture:</strong> ${formData.carYear}</p>;
+    const previewContent = `
+        <p><strong>Driver Name:</strong> ${formData.driverName}</p>
+        <p><strong>NIN:</strong> ${formData.nin}</p>
+        <p><strong>License Number:</strong> ${formData.licenseNumber}</p>
+        <p><strong>Phone Number:</strong> ${formData.phoneNumber}</p>
+        <p><strong>Car Plate Number:</strong> ${formData.carPlate}</p>
+        <p><strong>Car Model:</strong> ${formData.carModel}</p>
+        <p><strong>Car Color:</strong> ${formData.carColor}</p>
+        <p><strong>Year of Manufacture:</strong> ${formData.carYear}</p>`;
 
 // //     // Display preview
 // //     document.getElementById("preview-content").innerHTML = previewContent;

@@ -139,11 +139,11 @@
             <!-- Officers Section -->
             <section class="officers-section" id="officers-reg">
                 <!-- Add Officer Form -->
-                <div class="add-officer-form">
+                <div class="add-officer-form ">
                     <h3>Add New Officer</h3>
-                    <form id="officer-form">
+                    <form id="officer-form" onFormSubmit() autocomplete="off" onSubmit="event.preventDefault()">
                         <label for="officer-name">Full Name</label>
-                        <input type="text" id="officer-name" placeholder="Enter officer's name" required>
+                        <input type="text" id="officerName" placeholder="Enter officer's name" required>
 
                         <label for="officer-id">Officer ID</label>
                         <input type="text" id="officer-id" placeholder="Enter officer's ID" required>
@@ -170,7 +170,7 @@
                 <!-- Officers List -->
                 <div class="officers-list">
                     <h3>Registered Officers</h3>
-                    <table>
+                    <table id="tbule">
                         <thead>
                             <tr>
                                 <th>Officer ID</th>
@@ -324,107 +324,31 @@ function carousel() {
 }
 
 
-// Add Officer
-officerForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+function onFormSubmit(){
+    var formData = readFormData();
 
-    const name = document.getElementById('officer-name').value;
-    const id = document.getElementById('officer-id').value;
-    const email = document.getElementById('officer-email').value;
-    const phone = document.getElementById('officer-phone').value;
-    const rank = document.getElementById("rank").value;
-
-    const officer = { id, name, email, phone };
-    officers.push(officer);
-
-    renderOfficers();
-    officerForm.reset();
-});
-
-// Render Officers
-function renderOfficers() {
-    officersTableBody.innerHTML = '';
-
-    officers.forEach((officer, index) => {
-        const row = `
-            <tr>
-                <td>${officer.id}</td>
-                <td>${officer.name}</td>
-                <td>${officer.email}</td>
-                <td>${officer.phone}</td>
-                <td>
-                    <button class="edit-btn" onclick="editOfficer(${index})">Edit</button>
-                    <button class="delete-btn" onclick="deleteOfficer(${index})">Delete</button>
-                </td>
-            </tr>
-        `;
-        officersTableBody.innerHTML += row;
-    });
+    readFormData();
+    insertNewRecord();
 }
 
-// Edit Officer
-function editOfficer(index) {
-    const officer = officers[index];
-
-    document.getElementById('officer-name').value = officer.name;
-    document.getElementById('officer-id').value = officer.id;
-    document.getElementById('officer-email').value = officer.email;
-    document.getElementById('officer-phone').value = officer.phone;
-
-    officers.splice(index, 1);
-    renderOfficers();
+function readFormData(){
+    var formData = {};
+    formData["officerName"] =document.getElementById("officer-name").value;
+    formData["officer-id"] =document.getElementById("officer-id").value;
+    formData["rank"] =document.getElementById("rank").value;
+    formData["officer-email"] =document.getElementById("officer-email").value;
+    formData["officer-phone"] =document.getElementById("officer-phone").value;
+        
+    return formData;
 }
 
-// Delete Officer
-function deleteOfficer(index);
+function insertNewRecord(data){
+var table = dcoument.getElementById("tbule").getElementById("officers-table-body")[0];
+var newRow = table.insertRow(table.length);
+cell1 =newRow.insertCell(0);
+cell1.innerHTML = data.officerName
 
-//Monitoring Log
-
-const loginActivity = [
-    {
-        officerId: 'OFF001',
-        name: 'John Doe',
-        timestamp: '2024-11-12 10:00:00',
-        ipAddress: '192.168.1.10',
-        status: 'Successful',
-    },
-    {
-        officerId: 'OFF002',
-        name: 'Jane Smith',
-        timestamp: '2024-11-12 10:30:00',
-        ipAddress: '192.168.1.12',
-        status: 'Failed',
-    },
-    {
-        officerId: 'OFF003',
-        name: 'Michael Brown',
-        timestamp: '2024-11-12 11:00:00',
-        ipAddress: '192.168.1.15',
-        status: 'Successful',
-    },
-];
-
-// Function to render login activity
-function renderLoginActivity() {
-    const loginActivityBody = document.getElementById('login-activity-body');
-    loginActivityBody.innerHTML = '';
-
-    loginActivity.forEach((activity) => {
-        const row = `
-            <tr>
-                <td>${activity.officerId}</td>
-                <td>${activity.name}</td>
-                <td>${activity.timestamp}</td>
-                <td>${activity.ipAddress}</td>
-                <td>${activity.status}</td>
-            </tr>
-        `;
-        loginActivityBody.innerHTML += row;
-    });
 }
-
-// Call render function on page load
-renderLoginActivity();
 </script>
 </body>
 

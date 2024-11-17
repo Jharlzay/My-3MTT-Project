@@ -1232,11 +1232,18 @@ table tr:hover {
 
 
 /* Vehicle Search Section */
-.search-box {
+#vehicleSearchContainer{
   display: flex;
   justify-content: center;
-  padding: 30px;
- 
+  padding:80px;
+}
+
+.search-box {
+  display:flex;
+  justify-content: center;
+  padding: 90px;
+  background-color: var(--navy);
+
 }
 
 
@@ -1250,7 +1257,7 @@ table tr:hover {
 
 .search-box button {
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: var(--red);
   color: white;
   border: none;
   border-radius: 5px;
@@ -1258,7 +1265,7 @@ table tr:hover {
 }
 
 .search-box button:hover {
-  background-color: #45A049;
+  background-color: var(--navy);
 }
 
 #vehicle-details-display {
@@ -1640,5 +1647,7 @@ h2 {
  
 }
 
-                     
+#imageVmis img{
+ width:30px;
+}                 
 
