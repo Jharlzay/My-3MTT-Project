@@ -30,15 +30,13 @@
             <div class="navIcon">
                 
                 <div class="navLogo">
-                    <a href="/user-officer/index.html"><img src="/image/Preview.png" alt="VMIS Logo" width="80px"></a>
+                    <a href="/index.html"><img src="/image/Preview.png" alt="VMIS Logo" width="80px"></a>
                 </div>
                 <h2 class="vmis-text">Vehicle Montoring</h2>
                 <div id="navLinks">
                     <ul>
-                        <li><a href="/user-officer/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-                        <li><a href="/user-officer/login.html"><span class="material-symbols-outlined">
-                          policy
-                          </span>Vehicle search</a></li>
+                        <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="/admin/home.html"><i class="fa-solid fa-lock"></i> Admin</a></li>
                         <li><a href="#"><i class="fa-solid fa-headset"></i> Distress Call</a></li>
                         <li><a href="/user-officer/chat.html"><i class="fa-brands fa-rocketchat"></i> Chat</a></li>
                     </ul>
@@ -74,8 +72,8 @@
                 community safety with ease.
               </p>
               <div class="hero-buttons">
-                <button id="login-btn"><a href="/user-officer/login.html"> Login</a></button>
-                <button id="how-it-works-btn"><a href="#how-it-works"> How it Works</a></button>
+                <a href="/user-officer/login.html"><button id="login-btn">Officer Login</button></a>
+                <a href="/admin/home.html"><button id="how-it-works-btn">Admin Login</button></a>
               </div>
             </div>
             <div class="hero-image">
@@ -194,20 +192,7 @@
 
 
 
-<script>
-var slideIndex = 0;
-carousel();
+<script src="script.js">
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1}
-  x[slideIndex-1].style.display = "block";
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
 </script>
 </body>

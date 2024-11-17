@@ -10,7 +10,7 @@
     <!--======== REMIX ICONS =============-->
     <!--======== FONT AWESOME =============-->
     <script src="https://kit.fontawesome.com/7ac4033d6f.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=policy" />
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <!--======== SWIPER CSS =============-->
@@ -20,25 +20,24 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!--======== CSS =============-->
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/image/Preview-removebg-preview.png">
    
     <title>VMIS</title>
 </head>
 <body>
     <main>
-        <section class="navBar">
+        <section class="navBar" style="background-color: #10222E">
             <div class="navIcon">
                 
                 <div class="navLogo">
-                    <a href="/index.html"> <img src="/image/Preview.png" alt="VMIS Logo" width="80px"></a>
+                    <a href="/user-officer/index.html"><img src="/image/Preview.png" alt="VMIS Logo" width="80px"></a>
                 </div>
                 <h2 class="vmis-text">Vehicle Montoring</h2>
                 <div id="navLinks">
                     <ul>
-                        <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-                        <li><a href="/user.html">Road Search</a></li>
-                        <li><a href="admin.html"><i class="fa-solid fa-lock"></i> Admin</a></li>
+                        <li><a href="/user-officer/index.html"><i class="fa-solid fa-house"></i> Home</a></li> 
                         <li><a href="#"><i class="fa-solid fa-headset"></i> Distress Call</a></li>
-                        <li><a href="#"><i class="fa-brands fa-rocketchat"></i> Chat</a></li>
+                        <li><a href="/user-officer/chat.html"><i class="fa-brands fa-rocketchat"></i> Chat</a></li>
                     </ul>
                 </div>
             </div>   
@@ -61,8 +60,7 @@
                     <button type="submit" id="search-Btn"><i class="fa-solid fa-magnifying-glass"></i> Search </button> 
             </div>
         </section>
-
-        <section class="vehicle-management">
+        <section class="userManager">
             <div class="dashboard-container">
                 <!-- Sidebar -->
                 <aside class="sidebar">
@@ -72,14 +70,13 @@
                     <nav>
                         <ul>
                             <li><a href="./admin.html">Dashboard</a></li>
-                            <li><a href="./userManager.html">User Management</a></li>
-                            <li><a href="./vehicleDataBAse.html" class="active">Vehicle Database</a></li>
+                            <li><a href="./userManager.html" class="active">User Management</a></li>
+                            <li><a href="./vehicleDataBAse.html">Vehicle Database</a></li>
                             <li><a href="./reports.html">Reports</a></li>
-                            <li><a href="#settings">Settings</a></li>
+                            <li><a href="./settings.html">Settings</a></li>
                         </ul>
                     </nav>
                 </aside>
-        
                 <!-- Main Content -->
                 <main class="main-content">
                     <!-- Header -->
