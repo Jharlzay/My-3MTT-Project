@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Officer\OfficerController;
+use App\Http\Controllers\Vehicle\VehicleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,12 +34,16 @@ Route::post('login', [LoginController::class, 'authenticate'])->name('login');
 
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('officers', function (){
-        return view('admin.officers');
-    })->name('admin.officers');
-    Route::get('vehicles', function (){
-        return view('admin.vehicles');
-    })->name('admin.vehicles');
+    Route::group(['prefix' => 'officers'], function () {
+        Route::controller(OfficerController::class)->group(function () {
+            Route::get('', 'index')->name('admin.officers');
+            Route::get('add', 'create')->name('admin.officers.create');
+            Route::post('store', 'store')->name('admin.officers.store');
+        });
+    });
+
+    Route::get('vehicles', [VehicleController::class, 'index'])->name('admin.vehicles');
+
     Route::get('reports', function (){
         return view('admin.reports');
     })->name('admin.reports');
