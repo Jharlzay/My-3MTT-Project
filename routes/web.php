@@ -42,7 +42,13 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
         });
     });
 
-    Route::get('vehicles', [VehicleController::class, 'index'])->name('admin.vehicles');
+    Route::group(['prefix' => 'vehicles'], function () {
+        Route::controller(VehicleController::class)->group(function () {
+            Route::get('', 'index')->name('admin.vehicles');
+            Route::get('add', 'create')->name('admin.vehicles.create');
+            Route::post('store', 'store')->name('admin.vehicles.store');
+        });
+    });
 
     Route::get('reports', function (){
         return view('admin.reports');

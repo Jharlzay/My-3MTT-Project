@@ -16,11 +16,11 @@ class OfficerRepository extends BaseRepository implements OfficerInterface{
 
     public function __construct(App $app, OfficerEntity $officerEntity) {
         parent::__construct($app);
-        $this->officerEntity = $officerEntity;
+//        $this->officerEntity = $officerEntity;
     }
 
     public function getAllOfficers(): Collection {
-        return $this->officerEntity->all();
+        return $this->model->all();
     }
 
     public function create(array $data) {

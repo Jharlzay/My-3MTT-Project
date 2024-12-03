@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('model');
             $table->string('color');
             $table->string('pic');
-            $table->date('manufacture_year');
+            $table->char('manufacture_year',4);
             $table->enum('status', ['cleared', 'flagged'])->default('cleared');
             $table->timestamps();
         });

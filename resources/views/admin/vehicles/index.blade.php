@@ -5,7 +5,7 @@
     <section class="vehicle-management">
         <div class="header-row">
             <h3>Registered Vehicles</h3>
-            <button class="add-vehicle-btn"><a href="register.html"> Add New Vehicle</a></button>
+            <button class="add-vehicle-btn"><a href="{{ route('admin.vehicles.create') }}"> Add New Vehicle</a></button>
         </div>
 
         <table>
@@ -20,28 +20,22 @@
             </tr>
             </thead>
             <tbody>
+            @php
+            $i = 0;
+            @endphp
+            @foreach($vehicles as $vehicle)
             <tr>
-                <td>001</td>
-                <td>AB123CD</td>
-                <td>John Doe</td>
-                <td>Sedan</td>
+                <td>{{ ++$i }}</td>
+                <td>{{ $vehicle->plate_number }}AB123CD</td>
+                <td>{{ $vehicle->owner->firstname . " " . $vehicle->owner->lastname }}</td>
+                <td>{{ $vehicle->model }}</td>
                 <td><span class="status active">Active</span></td>
                 <td>
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </td>
             </tr>
-            <tr>
-                <td>002</td>
-                <td>EF456GH</td>
-                <td>Jane Smith</td>
-                <td>Truck</td>
-                <td><span class="status flagged">Flagged</span></td>
-                <td>
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                </td>
-            </tr>
+            @endforeach
             <!-- More rows -->
             </tbody>
         </table>

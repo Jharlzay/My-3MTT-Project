@@ -21,11 +21,11 @@
             </thead>
             <tbody>
             @php
-                $i = 1;
+                $i = 0;
             @endphp
             @foreach($officers as $officer)
             <tr>
-                <td>{{ $i++ }}</td>
+                <td>{{ ++$i }}</td>
                 <td>{{ $officer->firsname ." ". $officer->lastname }}John Doe</td>
                 <td>{{ $officer->email }}john.doe@example.com</td>
                 <td>{{ $officer->rank }}</td>

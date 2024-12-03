@@ -8,6 +8,7 @@ use App\Http\Requests\OfficerRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class OfficerController extends Controller
 {
@@ -30,7 +31,10 @@ class OfficerController extends Controller
     }
 
     public function store(OfficerRequest $request): RedirectResponse {
-        $response = $this->interface->create($request->validated());
+        $data = $request->validated();
+        $data['password'] = Hash::make($request->password);
+        $officer = $this->interface->create($data);
+        $officer->assignRole('officer');
         return redirect()->route('admin.officers');
 
     }

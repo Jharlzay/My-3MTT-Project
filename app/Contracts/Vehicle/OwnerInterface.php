@@ -2,9 +2,7 @@
 
 namespace App\Contracts\Vehicle;
 
-interface VehicleInterface {
-
-    public function getAllVehicles();
+interface OwnerInterface {
 
     public function create(array $data);
 }
