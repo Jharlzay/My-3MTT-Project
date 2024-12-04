@@ -30,10 +30,10 @@
                 <td>{{ $officer->email }}john.doe@example.com</td>
                 <td>{{ $officer->rank }}</td>
                 <td><span class="status active">{{ $officer->status ? 'Active': 'Inactive' }}</span></td>
-                <td>
+                {{--<td>
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
-                </td>
+                </td>--}}
             </tr>
             @endforeach
             <!-- Additional rows -->

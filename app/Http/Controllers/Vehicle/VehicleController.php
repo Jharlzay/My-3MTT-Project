@@ -6,8 +6,10 @@ use App\Contracts\Vehicle\OwnerInterface;
 use App\Contracts\Vehicle\VehicleInterface;
 use App\Entities\Vehicles\OwnerEntity;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\FlagVehicleRequest;
 use App\Http\Requests\VehicleRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class VehicleController extends Controller
@@ -56,7 +58,6 @@ class VehicleController extends Controller
             'color' => $request->color,
             'pic' => implode(',', $vehicleName),
             'manufacture_year' => $request->manufacture_year,
-            'status' => 'cleared'
         ];
 
         $ownerData = [
@@ -74,5 +75,30 @@ class VehicleController extends Controller
 
         return redirect()->route('admin.vehicles');
 
+    }
+
+    public function search(Request $request) {
+        $vehicle = $this->interface->getVehicle($request->plate_number);
+        $this->interface->updateVehicleQuery($vehicle);
+        if ($vehicle !== null) {
+            $data['vehicle'] = $vehicle;
+           return view('officer.index', $data) ;
+        }
+    }
+
+    public function flag(FlagVehicleRequest $request) {
+        $vehicle = $this->interface->getVehicle($request->plate_number);
+        if ($vehicle !== null) {
+            $data = [
+              'vehicle_id' => $vehicle->id,
+              'officer_id' => Auth::user()->id,
+              'reason' => $request->reason
+            ];
+
+            $this->interface->flagVehicle($data);
+
+            return redirect()->route('dashboard');
+
+        }
     }
 }

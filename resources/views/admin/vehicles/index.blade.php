@@ -29,11 +29,11 @@
                 <td>{{ $vehicle->plate_number }}AB123CD</td>
                 <td>{{ $vehicle->owner->firstname . " " . $vehicle->owner->lastname }}</td>
                 <td>{{ $vehicle->model }}</td>
-                <td><span class="status active">Active</span></td>
-                <td>
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                </td>
+                <td><span class="status active">{{ $vehicle->flagged !== null ? 'Flagged' : 'Active' }}</span></td>
+{{--                <td>--}}
+{{--                    <button class="edit-btn">Edit</button>--}}
+{{--                    <button class="delete-btn">Delete</button>--}}
+{{--                </td>--}}
             </tr>
             @endforeach
             <!-- More rows -->

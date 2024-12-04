@@ -98,7 +98,7 @@
 
             </div>
 
-            <button type="submit" class="btn" onclick="submitForm()">Submit Data</button>
+            <button type="submit" class="btn">Submit Data</button>
         </form>
         </div>
     </section>

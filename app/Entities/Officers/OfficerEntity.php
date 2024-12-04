@@ -2,6 +2,7 @@
 
 namespace App\Entities\Officers;
 
+use App\Entities\Vehicles\FlagVehicleEntity;
 use App\Entities\Vehicles\VehicleQueryEntity;
 use Database\Factories\OfficerEntityFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -23,8 +24,13 @@ class OfficerEntity extends Authenticatable {
         return $this->hasMany(VehicleQueryEntity::class, 'officer_id');
     }
 
+    public function flaggedVehicle() {
+        return $this->hasMany(FlagVehicleEntity::class, 'officer_id');
+    }
+
     protected static function newFactory() : Factory
     {
         return OfficerEntityFactory::new();
     }
+
 }

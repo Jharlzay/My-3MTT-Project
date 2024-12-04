@@ -32,29 +32,37 @@ Route::group(['prefix' => 'auth'], function () {
 
 Route::post('login', [LoginController::class, 'authenticate'])->name('login');
 
-Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::group(['prefix' => 'admin', 'middleware' => 'role:admin'], function(){
+        Route::group(['prefix' => 'officers'], function () {
+            Route::controller(OfficerController::class)->group(function () {
+                Route::get('', 'index')->name('admin.officers');
+                Route::get('add', 'create')->name('admin.officers.create');
+                Route::post('store', 'store')->name('admin.officers.store');
+            });
+        });
+
+        Route::group(['prefix' => 'vehicles'], function () {
+            Route::controller(VehicleController::class)->group(function () {
+                Route::get('', 'index')->name('admin.vehicles');
+                Route::get('add', 'create')->name('admin.vehicles.create');
+                Route::post('store', 'store')->name('admin.vehicles.store');
+            });
+        });
+
+        Route::get('reports', function (){
+            return view('admin.reports');
+        })->name('admin.reports');
+        Route::get('settings', function (){
+            return view('admin.settings');
+        })->name('admin.settings');
+    });
+
+    Route::post('flag', [VehicleController::class, 'flag'])->name('vehicle.flag');
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::group(['prefix' => 'officers'], function () {
-        Route::controller(OfficerController::class)->group(function () {
-            Route::get('', 'index')->name('admin.officers');
-            Route::get('add', 'create')->name('admin.officers.create');
-            Route::post('store', 'store')->name('admin.officers.store');
-        });
-    });
+    Route::get('search-result', [VehicleController::class, 'search'])->name('vehicle.search');
 
-    Route::group(['prefix' => 'vehicles'], function () {
-        Route::controller(VehicleController::class)->group(function () {
-            Route::get('', 'index')->name('admin.vehicles');
-            Route::get('add', 'create')->name('admin.vehicles.create');
-            Route::post('store', 'store')->name('admin.vehicles.store');
-        });
-    });
-
-    Route::get('reports', function (){
-        return view('admin.reports');
-    })->name('admin.reports');
-    Route::get('settings', function (){
-        return view('admin.settings');
-    })->name('admin.settings');
 });
+
 
