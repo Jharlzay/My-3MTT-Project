@@ -23,7 +23,7 @@ class OfficerRepository extends BaseRepository implements OfficerInterface{
         return $this->model->all();
     }
 
-    public function create(array $data) {
+    public function create(array $data) : OfficerEntity {
         return $this->model->create($data);
     }
 
