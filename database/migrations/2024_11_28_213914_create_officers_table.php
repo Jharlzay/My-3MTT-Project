@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('identification_number')->unique();
             $table->string('rank');
             $table->string('phone')->nullable();
+            $table->integer('status')->nullable()->default(1);
             $table->timestamps();
         });
     }

@@ -19,4 +19,8 @@ class VehicleEntity extends Model {
     public function vehicleQuery(): HasMany {
         return $this->hasMany(VehicleQueryEntity::class, 'vehicle_id');
     }
+
+    public function flagged() {
+        return $this->hasOne(FlagVehicleEntity::class, 'vehicle_id');
+    }
 }

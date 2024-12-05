@@ -38,8 +38,8 @@
             <tr>
                 <td>{{ $vehicleQuery->officer->identification_number }}</td>
                 <td>{{ $vehicleQuery->vehicle->plate_number }}</td>
-                <td>{{ $vehicleQuery->vehicle->status }}</td>
-                <td>{{  \Carbon\Carbon::format($vehicleQuery->vehicle->created_at)->parse('Y-m-d')}}</td>
+                <td>{{ $vehicleQuery->vehicle->flagged !== null ? 'Flagged' : 'Active' }}</td>
+                <td>{{  \Carbon\Carbon::parse($vehicleQuery->vehicle->created_at)->format('Y-m-d')}}</td>
             </tr>
             @endforeach
             </tbody>

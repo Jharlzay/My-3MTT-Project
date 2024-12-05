@@ -12,6 +12,10 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(\App\Contracts\Dashboard\DashboardInterface::class, \App\Repositories\Dashboard\DashboardRepository::class);
+        $this->app->bind(\App\Contracts\Officer\OfficerInterface::class, \App\Repositories\Officer\OfficerRepository::class);
+        $this->app->bind(\App\Contracts\Vehicle\VehicleInterface::class, \App\Repositories\Vehicle\VehicleRepository::class);
+        $this->app->bind(\App\Contracts\Vehicle\OwnerInterface::class, \App\Repositories\Vehicle\OwnerRepository::class);
+
     }
 
     /**
